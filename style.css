@@ -76,10 +76,16 @@ body * {
   left: 0;
   transform: translateY(-50%);
   z-index: 1;
+  animation: slide-back 0.2s;
 }
+#switch button:hover {
+  outline: 5px solid var(--surface-color-hover);
+  transition: all 0.1s;
+}
+
 #switch span {
   display: block;
-  width: 63px;
+  width: 62px;
   height: 24px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
@@ -88,8 +94,7 @@ body * {
   border-radius: 9999px;
 }
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
 }
 
 /*Botões*/
@@ -151,4 +156,21 @@ footer {
 footer > p > a {
   text-decoration: underline;
   font-weight: 400;
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
