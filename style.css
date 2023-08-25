@@ -29,6 +29,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -38,7 +39,6 @@ body * {
 /*Container*/
 #container {
   width: 360px;
-  height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
